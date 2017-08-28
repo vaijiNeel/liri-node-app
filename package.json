@@ -1,0 +1,27 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "creating liri app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaijiNeel/liri-node-app.git"
+  },
+  "keywords": [
+    "liri"
+  ],
+  "author": "Vaiji Neelakandan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaijiNeel/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/vaijiNeel/liri-node-app#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
+}
