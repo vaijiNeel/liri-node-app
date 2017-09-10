@@ -78,8 +78,6 @@ function getSongDetails(songName) {
 		if (err) {
 			console.log('spotify api call error - ' + err);
 		} else {
-			// var details = data.tracks.items[0];
-			// console.log(details);
 			var songDetails = "";
 			var artists = data.tracks.items[0].artists;
 			var artistNames = "";
@@ -132,14 +130,14 @@ function getMovieDetails(movieName) {
 					ratingVal = temp[i].Value;
 				}
 			}
-			movieDetails = "\nMOVIE DETAILS:\nMovie Title - " + JSON.parse(body).Title + 
-				"\nThe year movie was made - " + JSON.parse(body).Year +
-				"\nIMDB Rating - " + JSON.parse(body).imdbRating +
+			movieDetails = "\nMOVIE DETAILS:\nMovie Title - " + temp.Title + 
+				"\nThe year movie was made - " + temp.Year +
+				"\nIMDB Rating - " + temp.imdbRating +
 				"\nRotten Tomatoes Rating - " + ratingVal +
-				"\nCountry where the movie was produced - " + JSON.parse(body).Country + 
-				"\nLanguage of the movie - " + JSON.parse(body).Language +
-				"\nPlot of the movie - " + JSON.parse(body).Plot +
-				"\nActors in the movie - " + JSON.parse(body).Actors +
+				"\nCountry where the movie was produced - " + temp.Country + 
+				"\nLanguage of the movie - " + temp.Language +
+				"\nPlot of the movie - " + temp.Plot +
+				"\nActors in the movie - " + temp.Actors +
 				"\n-------------------------------------\n";
 			console.log(movieDetails);
 			//append to log file
@@ -148,7 +146,8 @@ function getMovieDetails(movieName) {
 					console.log("spotify write log file error - " + err);
 				}
 			});
-		}
+		} else
+			console.log("Movie not found.");
 	});
 }
 
