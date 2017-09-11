@@ -116,28 +116,33 @@ function getMovieDetails(movieName) {
 	//api call
 	var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + omdbIDKey;
 	var movieDetails = "";
+	// console.log(queryUrl);
 	request(queryUrl, function(error, response, body) {
-		if (!error && response.statusCode === 200) {
-			// console.log(response);
-			// console.log(body);
+		// console.log(body);
+		var details = JSON.parse(body);
+		// console.log(details);
+		// console.log(details.Response);
+		if(details.Response === "False") {
+			console.log(details.Error);
+		} else {
 			//get rotten tomatoes rating
 			var ratingVal="";
 			var temp = JSON.parse(body).Ratings;
 			// console.log("temp - " + temp);
 			for (var i = 0; i < temp.length; i++) {
-				// console.log(temp[i].Source);
+				console.log(temp[i].Source);
 				if(temp[i].Source==="Rotten Tomatoes"){
 					ratingVal = temp[i].Value;
 				}
 			}
-			movieDetails = "\nMOVIE DETAILS:\nMovie Title - " + temp.Title + 
-				"\nThe year movie was made - " + temp.Year +
-				"\nIMDB Rating - " + temp.imdbRating +
+			movieDetails = "\nMOVIE DETAILS:\nMovie Title - " + details.Title + 
+				"\nThe year movie was made - " + details.Year +
+				"\nIMDB Rating - " + details.imdbRating +
 				"\nRotten Tomatoes Rating - " + ratingVal +
-				"\nCountry where the movie was produced - " + temp.Country + 
-				"\nLanguage of the movie - " + temp.Language +
-				"\nPlot of the movie - " + temp.Plot +
-				"\nActors in the movie - " + temp.Actors +
+				"\nCountry where the movie was produced - " + details.Country + 
+				"\nLanguage of the movie - " + details.Language +
+				"\nPlot of the movie - " + details.Plot +
+				"\nActors in the movie - " + details.Actors +
 				"\n-------------------------------------\n";
 			console.log(movieDetails);
 			//append to log file
@@ -146,8 +151,7 @@ function getMovieDetails(movieName) {
 					console.log("spotify write log file error - " + err);
 				}
 			});
-		} else
-			console.log("Movie not found.");
+		} 
 	});
 }
 

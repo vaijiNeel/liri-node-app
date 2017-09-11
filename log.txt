@@ -1,0 +1,44 @@
+
+MOVIE DETAILS:
+Movie Title - undefined
+The year movie was made - undefined
+IMDB Rating - undefined
+Rotten Tomatoes Rating - 77%
+Country where the movie was produced - undefined
+Language of the movie - undefined
+Plot of the movie - undefined
+Actors in the movie - undefined
+-------------------------------------
+
+MOVIE DETAILS:
+Movie Title - undefined
+The year movie was made - undefined
+IMDB Rating - undefined
+Rotten Tomatoes Rating - 77%
+Country where the movie was produced - undefined
+Language of the movie - undefined
+Plot of the movie - undefined
+Actors in the movie - undefined
+-------------------------------------
+
+MOVIE DETAILS:
+Movie Title - undefined
+The year movie was made - undefined
+IMDB Rating - undefined
+Rotten Tomatoes Rating - 77%
+Country where the movie was produced - undefined
+Language of the movie - undefined
+Plot of the movie - undefined
+Actors in the movie - undefined
+-------------------------------------
+
+MOVIE DETAILS:
+Movie Title - Ice Age
+The year movie was made - 2002
+IMDB Rating - 7.6
+Rotten Tomatoes Rating - 77%
+Country where the movie was produced - USA
+Language of the movie - English
+Plot of the movie - Set during the Ice Age, a sabertooth tiger, a sloth, and a wooly mammoth find a lost human infant, and they try to return him to his tribe.
+Actors in the movie - Ray Romano, John Leguizamo, Denis Leary, Goran Visnjic
+-------------------------------------
